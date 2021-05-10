@@ -66,23 +66,23 @@ final class MenuServiceTest: XCTestCase {
             .just(self.responseData)
         }
         let expectedResponse = [
-            Category(
+            CategoryResponse(
                 id: 1,
                 name: "Pizza",
                 menu: [
-                    MenuItem(id: 1, name: "name 1", description: "description 1",
+                    MenuItemResponse(id: 1, name: "name 1", description: "description 1",
                              price: 20, unit: "10 grams, 2 pieces"),
-                    MenuItem(id: 2, name: "name 2", description: "description 2",
+                    MenuItemResponse(id: 2, name: "name 2", description: "description 2",
                              price: 90, unit: "100 grams, 10 pieces")
                 ]
             ),
-            Category(
+            CategoryResponse(
                 id: 2,
                 name: "Sushi",
                 menu: [
-                    MenuItem(id: 11, name: "name 11", description: "description 11",
+                    MenuItemResponse(id: 11, name: "name 11", description: "description 11",
                              price: 120, unit: "20 grams, 4 pieces"),
-                    MenuItem(id: 12, name: "name 12", description: "description 12",
+                    MenuItemResponse(id: 12, name: "name 12", description: "description 12",
                              price: 190, unit: "200 grams, 20 pieces")
                 ]
             )

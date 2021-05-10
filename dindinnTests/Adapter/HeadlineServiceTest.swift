@@ -34,9 +34,9 @@ final class HeadlineServiceTest: XCTestCase {
             .just(self.responseData)
         }
         let expectedResponse = [
-            HeadlineItem(id: 1,
+            HeadlineItemResponse(id: 1,
                 image: "https://loremflickr.com/g/320/320/food/all"),
-            HeadlineItem(id: 2,
+            HeadlineItemResponse(id: 2,
                 image: "https://loremflickr.com/g/320/320/food/all")]
             
         let service = HeadlineService(api: apiStub)

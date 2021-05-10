@@ -8,17 +8,17 @@
 import Foundation
 import RxSwift
 
-struct Categories: Decodable, Equatable {
-    let categories: [Category]
+struct CategoriesResponse: Decodable, Equatable {
+    let categories: [CategoryResponse]
 }
 
-struct Category: Decodable, Equatable {
+struct CategoryResponse: Decodable, Equatable {
     let id: Int
     let name: String
-    let menu: [MenuItem]
+    let menu: [MenuItemResponse]
 }
 
-struct MenuItem: Decodable, Equatable {
+struct MenuItemResponse: Decodable, Equatable {
     let id: Int
     let name: String
     let description: String
@@ -29,10 +29,10 @@ struct MenuItem: Decodable, Equatable {
 struct MenuService {
     let api: () -> Observable<Data>
     
-    func get() -> Observable<[Category]> {
+    func get() -> Observable<[CategoryResponse]> {
         api().map { data in
             let decoder = JSONDecoder()
-            let categories = try decoder.decode(Categories.self, from: data)
+            let categories = try decoder.decode(CategoriesResponse.self, from: data)
             return categories.categories
         }
     }

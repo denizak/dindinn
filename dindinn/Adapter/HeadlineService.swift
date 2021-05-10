@@ -8,11 +8,11 @@
 import Foundation
 import RxSwift
 
-struct Headline: Decodable {
-    let headlines: [HeadlineItem]
+struct HeadlineResponse: Decodable {
+    let headlines: [HeadlineItemResponse]
 }
 
-struct HeadlineItem: Decodable, Equatable {
+struct HeadlineItemResponse: Decodable, Equatable {
     let id: Int
     let image: String
 }
@@ -21,10 +21,10 @@ struct HeadlineService {
     
     let api: () -> Observable<Data>
     
-    func get() -> Observable<[HeadlineItem]> {
+    func get() -> Observable<[HeadlineItemResponse]> {
         api().map { data in
             let decoder = JSONDecoder()
-            let headline = try decoder.decode(Headline.self, from: data)
+            let headline = try decoder.decode(HeadlineResponse.self, from: data)
             return headline.headlines
         }
     }
