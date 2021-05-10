@@ -6,27 +6,39 @@
 //
 
 import XCTest
+import RxSwift
+import RxBlocking
 
-class ShowMainMenuTest: XCTestCase {
+@testable import dindinn
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+final class ShowMainMenuTest: XCTestCase {
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testShow() throws {
+        let showMainMenu = ShowMainMenu(getHeadline: {
+                                            .just([
+                                                HeadlineItem(id: 1, image: "image_url")
+                                            ]) },
+        getMenu: { .just([
+            Category(id: 1, name: "category1",
+                     menu: [MenuItem(id: 1,
+                                     name: "menu1",
+                                     description: "description1",
+                                     price: 10, unit: "100 grams")])
+        ]) })
+        
+        let expectedResult = MainMenu(headlines: [HeadlineItem(id: 1, image: "image_url")],
+                                      categories: [Category(id: 1,
+                                                            name: "category1",
+                                                            menu: [MenuItem(id: 1,
+                                                                            name: "menu1",
+                                                                            description: "description1",
+                                                                            price: 10,
+                                                                            unit: "100 grams")
+                                                            ])])
+        
+        let actualResult = try showMainMenu.show().toBlocking().first()
+        
+        XCTAssertEqual(expectedResult, actualResult)
     }
 
 }
