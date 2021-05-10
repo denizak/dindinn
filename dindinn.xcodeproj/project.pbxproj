@@ -25,6 +25,8 @@
 		606C3F6C2649676300545DD6 /* MenuService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606C3F6B2649676300545DD6 /* MenuService.swift */; };
 		606C3F6F264969B000545DD6 /* ShowMainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606C3F6E264969B000545DD6 /* ShowMainMenu.swift */; };
 		606C3F73264969E000545DD6 /* ShowMainMenuTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606C3F72264969E000545DD6 /* ShowMainMenuTest.swift */; };
+		606C3F7626497CC300545DD6 /* MainMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606C3F7526497CC300545DD6 /* MainMenuViewModel.swift */; };
+		606C3F7926497CE000545DD6 /* MainMenuViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606C3F7826497CE000545DD6 /* MainMenuViewModelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		606C3F6B2649676300545DD6 /* MenuService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuService.swift; sourceTree = "<group>"; };
 		606C3F6E264969B000545DD6 /* ShowMainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMainMenu.swift; sourceTree = "<group>"; };
 		606C3F72264969E000545DD6 /* ShowMainMenuTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMainMenuTest.swift; sourceTree = "<group>"; };
+		606C3F7526497CC300545DD6 /* MainMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewModel.swift; sourceTree = "<group>"; };
+		606C3F7826497CE000545DD6 /* MainMenuViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,7 @@
 		60108E4C26481F200014CE69 /* dindinn */ = {
 			isa = PBXGroup;
 			children = (
+				606C3F7426497B5300545DD6 /* ViewModel */,
 				606C3F6D2649699200545DD6 /* Interactor */,
 				60108E882648324C0014CE69 /* Adapter */,
 				60108E4D26481F200014CE69 /* AppDelegate.swift */,
@@ -136,6 +141,7 @@
 		60108E6326481F240014CE69 /* dindinnTests */ = {
 			isa = PBXGroup;
 			children = (
+				606C3F7726497CD000545DD6 /* ViewModel */,
 				606C3F71264969CE00545DD6 /* Interactor */,
 				606C3F70264969BD00545DD6 /* Adapter */,
 				60108E6626481F240014CE69 /* Info.plist */,
@@ -191,6 +197,22 @@
 				606C3F72264969E000545DD6 /* ShowMainMenuTest.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		606C3F7426497B5300545DD6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				606C3F7526497CC300545DD6 /* MainMenuViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		606C3F7726497CD000545DD6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				606C3F7826497CE000545DD6 /* MainMenuViewModelTest.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +362,7 @@
 				606C3F6F264969B000545DD6 /* ShowMainMenu.swift in Sources */,
 				60108E5026481F200014CE69 /* SceneDelegate.swift in Sources */,
 				606C3F6C2649676300545DD6 /* MenuService.swift in Sources */,
+				606C3F7626497CC300545DD6 /* MainMenuViewModel.swift in Sources */,
 				60108E98264835680014CE69 /* HeadlineService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				606C3F7926497CE000545DD6 /* MainMenuViewModelTest.swift in Sources */,
 				606C3F6A2649644200545DD6 /* MenuServiceTest.swift in Sources */,
 				606C3F73264969E000545DD6 /* ShowMainMenuTest.swift in Sources */,
 				60108E9A2648357D0014CE69 /* HeadlineServiceTest.swift in Sources */,
