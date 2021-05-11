@@ -24,17 +24,45 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="tes-Vz-p12"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cj0-89-obA">
+                                <rect key="frame" x="317" y="799" width="57" height="57"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="2Ye-vo-yge"/>
+                                    <constraint firstAttribute="width" constant="57" id="C0F-eT-kkd"/>
+                                </constraints>
+                                <state key="normal" title="🛒">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCy-d7-4AJ">
+                                <rect key="frame" x="317" y="789" width="57" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="Cj0-89-obA" firstAttribute="leading" secondItem="tCy-d7-4AJ" secondAttribute="leading" id="2gR-oP-HjQ"/>
                             <constraint firstItem="IE5-Eo-XWV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="3dW-YR-56s"/>
                             <constraint firstAttribute="bottom" secondItem="IE5-Eo-XWV" secondAttribute="bottom" id="3pN-8h-FuP"/>
+                            <constraint firstItem="Cj0-89-obA" firstAttribute="top" secondItem="tCy-d7-4AJ" secondAttribute="top" constant="10" id="9bH-uP-k2T"/>
+                            <constraint firstItem="Cj0-89-obA" firstAttribute="trailing" secondItem="tCy-d7-4AJ" secondAttribute="trailing" id="FMS-lg-yzU"/>
                             <constraint firstItem="IE5-Eo-XWV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PGu-eQ-gav"/>
+                            <constraint firstAttribute="trailing" secondItem="Cj0-89-obA" secondAttribute="trailing" constant="40" id="XKH-11-dMU"/>
+                            <constraint firstAttribute="bottom" secondItem="Cj0-89-obA" secondAttribute="bottom" constant="40" id="Xkf-zv-Gy8"/>
                             <constraint firstItem="IE5-Eo-XWV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="thP-Ub-Tyl"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cartNumber" destination="tCy-d7-4AJ" id="jrl-ez-iS7"/>
                         <outlet property="tableView" destination="IE5-Eo-XWV" id="cHw-No-m35"/>
                     </connections>
                 </viewController>

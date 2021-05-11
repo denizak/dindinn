@@ -25,7 +25,7 @@ final class MenuItemTableViewCell: UITableViewCell {
     weak var delegate: AddToCartMenuDelegate?
     
     let viewModel = createMainMenuViewModel()
-    private let disposeBag = DisposeBag()
+    private let serialDisposable = SerialDisposable()
     
     func setup(_ menu: MenuItem) {
         menuImage.load(menu.image)
@@ -35,14 +35,14 @@ final class MenuItemTableViewCell: UITableViewCell {
         
         let priceString = "\(menu.price) USD"
         addToCartButton.setTitle(priceString, for: .normal)
-        addToCartButton.rx.tap.subscribe { [unowned self] _ in
+        serialDisposable.disposable = addToCartButton.rx.tap.subscribe { [unowned self] _ in
             self.viewModel.addItem(item: menu)
             
             addToCartButton.setTitle("added", for: .normal)
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 addToCartButton.setTitle(priceString, for: .normal)
             }
-        }.disposed(by: disposeBag)
+        }
 
     }
     

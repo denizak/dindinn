@@ -10,7 +10,7 @@ import RxSwift
 
 func createCartItemButtonViewModel() -> CartItemButtonViewModel {
     CartItemButtonViewModel(numberOfItems: {
-        createManageCartItem().numberOfItems
+        manageCartItem.numberOfItems
     })
 }
 
@@ -19,13 +19,11 @@ func createMainMenuViewModel() -> MainMenuViewModel {
     MainMenuViewModel(showMainMenu: {
         createShowMainMenu().show()
     }, addMenuItem: {
-        createManageCartItem().add(item: $0)
+        manageCartItem.add(item: $0)
     })
 }
 
-func createManageCartItem() -> ManageCartItem {
-    ManageCartItemImpl(store: sharedCartItemStore())
-}
+let manageCartItem: ManageCartItem = ManageCartItemImpl(store: sharedCartItemStore())
 
 func createShowMainMenu() -> ShowMainMenu {
     ShowMainMenu(getHeadline: {

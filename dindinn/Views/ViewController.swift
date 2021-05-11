@@ -13,13 +13,19 @@ final class ViewController: UIViewController {
 
     private let disposeBag = DisposeBag()
     let viewModel: MainMenuViewModel = createMainMenuViewModel()
+    let cartButtonViewModel = createCartItemButtonViewModel()
     var categories: [Category] = []
     var headlines: [HeadlineItem] = []
     
+    @IBOutlet weak var cartNumber: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        cartButtonViewModel.numberOfItems
+            .drive(onNext: { [unowned self] in self.cartNumber.text = "\($0)" })
+            .disposed(by: disposeBag)
         
         viewModel.categories
             .drive(onNext: { [unowned self] categories in
