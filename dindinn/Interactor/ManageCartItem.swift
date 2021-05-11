@@ -17,7 +17,7 @@ struct ManageCartItem {
         numberOfItemsRelay.asObservable()
     }
     
-    private let numberOfItemsRelay = PublishRelay<Int>()
+    private let numberOfItemsRelay = BehaviorRelay<Int>(value: 0)
     
     init(store: CartItemStore) {
         self.store = store

@@ -23,6 +23,8 @@
 		60108E9F26483C320014CE69 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 60108E9E26483C320014CE69 /* RxBlocking */; };
 		6044E86C264A6B6F0043A54C /* ManageCartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6044E86B264A6B6F0043A54C /* ManageCartItem.swift */; };
 		6044E86E264A6B820043A54C /* ManageCartItemTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6044E86D264A6B820043A54C /* ManageCartItemTest.swift */; };
+		6044E870264A71BD0043A54C /* CartItemButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6044E86F264A71BD0043A54C /* CartItemButtonViewModel.swift */; };
+		6044E872264A724C0043A54C /* CartItemButtonViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6044E871264A724C0043A54C /* CartItemButtonViewModelTest.swift */; };
 		606C3F6A2649644200545DD6 /* MenuServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606C3F692649644200545DD6 /* MenuServiceTest.swift */; };
 		606C3F6C2649676300545DD6 /* MenuService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606C3F6B2649676300545DD6 /* MenuService.swift */; };
 		606C3F6F264969B000545DD6 /* ShowMainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606C3F6E264969B000545DD6 /* ShowMainMenu.swift */; };
@@ -68,6 +70,8 @@
 		60108E992648357D0014CE69 /* HeadlineServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineServiceTest.swift; sourceTree = "<group>"; };
 		6044E86B264A6B6F0043A54C /* ManageCartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageCartItem.swift; sourceTree = "<group>"; };
 		6044E86D264A6B820043A54C /* ManageCartItemTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageCartItemTest.swift; sourceTree = "<group>"; };
+		6044E86F264A71BD0043A54C /* CartItemButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemButtonViewModel.swift; sourceTree = "<group>"; };
+		6044E871264A724C0043A54C /* CartItemButtonViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemButtonViewModelTest.swift; sourceTree = "<group>"; };
 		606C3F692649644200545DD6 /* MenuServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuServiceTest.swift; sourceTree = "<group>"; };
 		606C3F6B2649676300545DD6 /* MenuService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuService.swift; sourceTree = "<group>"; };
 		606C3F6E264969B000545DD6 /* ShowMainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMainMenu.swift; sourceTree = "<group>"; };
@@ -215,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				606C3F7526497CC300545DD6 /* MainMenuViewModel.swift */,
+				6044E86F264A71BD0043A54C /* CartItemButtonViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				606C3F7826497CE000545DD6 /* MainMenuViewModelTest.swift */,
+				6044E871264A724C0043A54C /* CartItemButtonViewModelTest.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -370,6 +376,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60108E5226481F200014CE69 /* ViewController.swift in Sources */,
+				6044E870264A71BD0043A54C /* CartItemButtonViewModel.swift in Sources */,
 				60108E4E26481F200014CE69 /* AppDelegate.swift in Sources */,
 				606C3F6F264969B000545DD6 /* ShowMainMenu.swift in Sources */,
 				60108E5026481F200014CE69 /* SceneDelegate.swift in Sources */,
@@ -386,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				606C3F7926497CE000545DD6 /* MainMenuViewModelTest.swift in Sources */,
+				6044E872264A724C0043A54C /* CartItemButtonViewModelTest.swift in Sources */,
 				606C3F6A2649644200545DD6 /* MenuServiceTest.swift in Sources */,
 				606C3F73264969E000545DD6 /* ShowMainMenuTest.swift in Sources */,
 				6044E86E264A6B820043A54C /* ManageCartItemTest.swift in Sources */,
