@@ -35,6 +35,8 @@ final class ViewController: UIViewController {
         
         self.tableView.register(UINib(nibName: "HeadlineTableViewCell", bundle: nil),
                                 forCellReuseIdentifier: "HeadlineTableViewCell")
+        self.tableView.register(UINib(nibName: "MenuItemTableViewCell", bundle: nil),
+                                forCellReuseIdentifier: "MenuItemTableViewCell")
         
         viewModel.viewLoad()
     }
@@ -50,7 +52,9 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
             cell.setup(headlines: headlines)
             return cell
             
-        case 1: return UITableViewCell() // menu view
+        case 1: let cell = tableView.dequeueReusableCell(withIdentifier: MenuItemTableViewCell.identifier) as! MenuItemTableViewCell
+            cell.setup(categories.first!.menu[indexPath.row])
+            return cell
         default: return UITableViewCell()
         }
     }
@@ -67,11 +71,9 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         switch section {
-        case 0: return UIView(frame: .init(x: 0, y: 0, width: tableView.frame.width, height: 1))
+        case 0: return UIView(frame: .init(x: 0, y: 0, width: tableView.frame.width, height: 0))
         case 1:
-            let view = UIView(frame: .init(x: 0, y: 0, width: tableView.frame.width, height: 50))
-            view.backgroundColor = .yellow
-            return view
+            return UIView(frame: .init(x: 0, y: 0, width: tableView.frame.width, height: 0))
         default: return nil
         }
     }

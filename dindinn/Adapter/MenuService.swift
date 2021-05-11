@@ -24,6 +24,7 @@ struct MenuItemResponse: Decodable, Equatable {
     let description: String
     let price: Int
     let unit: String
+    let image: String
 }
 
 struct MenuService {

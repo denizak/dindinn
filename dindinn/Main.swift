@@ -8,6 +8,12 @@
 import Foundation
 import RxSwift
 
+func createCartItemButtonViewModel() -> CartItemButtonViewModel {
+    CartItemButtonViewModel(numberOfItems: {
+        createManageCartItem().numberOfItems
+    })
+}
+
 func createMainMenuViewModel() -> MainMenuViewModel {
     
     MainMenuViewModel(showMainMenu: {
@@ -39,7 +45,8 @@ func createShowMainMenu() -> ShowMainMenu {
                                          name: $0.name,
                                          description: $0.description,
                                          price: $0.price,
-                                         unit: $0.unit)
+                                         unit: $0.unit,
+                                         image: $0.image)
                              }))
                 }
             }
@@ -82,14 +89,16 @@ func createMenuService() -> MenuService {
                            "name":"name 1",
                            "description":"description 1",
                            "price":20,
-                           "unit":"10 grams, 2 pieces"
+                           "unit":"10 grams, 2 pieces",
+                           "image": "https://loremflickr.com/g/320/320/food/all"
                         },
                         {
                            "id":2,
                            "name":"name 2",
                            "description":"description 2",
                            "price":90,
-                           "unit":"100 grams, 10 pieces"
+                           "unit":"100 grams, 10 pieces",
+                           "image": "https://loremflickr.com/g/320/320/food/all"
                         }
                      ]
                   },
@@ -102,14 +111,16 @@ func createMenuService() -> MenuService {
                            "name":"name 11",
                            "description":"description 11",
                            "price":120,
-                           "unit":"20 grams, 4 pieces"
+                           "unit":"20 grams, 4 pieces",
+                           "image": "https://loremflickr.com/g/320/320/food/all"
                         },
                         {
                            "id":12,
                            "name":"name 12",
                            "description":"description 12",
                            "price":190,
-                           "unit":"200 grams, 20 pieces"
+                           "unit":"200 grams, 20 pieces",
+                           "image": "https://loremflickr.com/g/320/320/food/all"
                         }
                      ]
                   }

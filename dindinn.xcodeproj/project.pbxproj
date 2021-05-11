@@ -38,6 +38,8 @@
 		607094EA264AC3FD0050796B /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607094E9264AC3FD0050796B /* Main.swift */; };
 		607094ED264ACAE90050796B /* HeadlineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607094EC264ACAE90050796B /* HeadlineTableViewCell.swift */; };
 		607094EF264ACB230050796B /* HeadlineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607094EE264ACB230050796B /* HeadlineTableViewCell.xib */; };
+		607094FF264ADF1A0050796B /* MenuItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607094FE264ADF1A0050796B /* MenuItemTableViewCell.swift */; };
+		60709501264AE1AE0050796B /* MenuItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 60709500264AE1AE0050796B /* MenuItemTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,8 @@
 		607094E9264AC3FD0050796B /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		607094EC264ACAE90050796B /* HeadlineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineTableViewCell.swift; sourceTree = "<group>"; };
 		607094EE264ACB230050796B /* HeadlineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeadlineTableViewCell.xib; sourceTree = "<group>"; };
+		607094FE264ADF1A0050796B /* MenuItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemTableViewCell.swift; sourceTree = "<group>"; };
+		60709500264AE1AE0050796B /* MenuItemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuItemTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +256,8 @@
 				60108E5126481F200014CE69 /* ViewController.swift */,
 				607094EC264ACAE90050796B /* HeadlineTableViewCell.swift */,
 				607094EE264ACB230050796B /* HeadlineTableViewCell.xib */,
+				607094FE264ADF1A0050796B /* MenuItemTableViewCell.swift */,
+				60709500264AE1AE0050796B /* MenuItemTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -374,6 +380,7 @@
 				60108E5A26481F240014CE69 /* LaunchScreen.storyboard in Resources */,
 				60108E5726481F240014CE69 /* Assets.xcassets in Resources */,
 				60108E5526481F210014CE69 /* Main.storyboard in Resources */,
+				60709501264AE1AE0050796B /* MenuItemTableViewCell.xib in Resources */,
 				607094EF264ACB230050796B /* HeadlineTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,6 +417,7 @@
 				6044E86C264A6B6F0043A54C /* ManageCartItem.swift in Sources */,
 				606C3F6C2649676300545DD6 /* MenuService.swift in Sources */,
 				606C3F7626497CC300545DD6 /* MainMenuViewModel.swift in Sources */,
+				607094FF264ADF1A0050796B /* MenuItemTableViewCell.swift in Sources */,
 				60108E98264835680014CE69 /* HeadlineService.swift in Sources */,
 				6044E874264A7AD90043A54C /* CartViewModel.swift in Sources */,
 			);
