@@ -14,7 +14,7 @@ final class ManageCartItemTest: XCTestCase {
 
     func testAddCartItem() {
         let cartItemStore = CartItemStoreMock()
-        let manageCartItem = ManageCartItem(store: cartItemStore)
+        let manageCartItem = ManageCartItemImpl(store: cartItemStore)
         
         manageCartItem.add(item: MenuItem(id: 1, name: "name",
                                           description: "description",
@@ -25,7 +25,7 @@ final class ManageCartItemTest: XCTestCase {
     
     func testGetCartItem() {
         let cartItemStore = CartItemStoreMock()
-        let manageCartItem = ManageCartItem(store: cartItemStore)
+        let manageCartItem = ManageCartItemImpl(store: cartItemStore)
         
         manageCartItem.add(item: MenuItem(id: 1, name: "name",
                                           description: "description",
@@ -37,7 +37,7 @@ final class ManageCartItemTest: XCTestCase {
     
     func testGetCartItemNumber() {
         let cartItemStore = CartItemStoreMock()
-        let manageCartItem = ManageCartItem(store: cartItemStore)
+        let manageCartItem = ManageCartItemImpl(store: cartItemStore)
         
         var actualNumber = 0
         let disposable = manageCartItem.numberOfItems

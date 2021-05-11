@@ -19,14 +19,17 @@ final class MainMenuViewModel {
         headlinesValue.asDriver(onErrorJustReturn: [])
     }
     
-    init(showMainMenu: @escaping () -> Observable<MainMenu>) {
+    init(showMainMenu: @escaping () -> Observable<MainMenu>,
+         addMenuItem: @escaping (MenuItem) -> Void) {
         self.showMainMenu = showMainMenu
+        self.addMenuItem = addMenuItem
     }
     
     private let disposeBag = DisposeBag()
     private let categoriesValue = PublishRelay<[Category]>()
     private let headlinesValue = PublishRelay<[HeadlineItem]>()
     private let showMainMenu: () -> Observable<MainMenu>
+    private let addMenuItem: (MenuItem) -> Void
     
     func viewLoad() {
         showMainMenu()
@@ -35,5 +38,9 @@ final class MainMenuViewModel {
                 self?.headlinesValue.accept(mainMenu.headlines)
             })
             .disposed(by: disposeBag)
+    }
+    
+    func addItem(item: MenuItem) {
+        self.addMenuItem(item)
     }
 }

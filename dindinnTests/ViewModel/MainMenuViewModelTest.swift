@@ -26,7 +26,7 @@ final class MainMenuViewModelTest: XCTestCase {
                                                                  name: "menu1",
                                                                  description: "description1",
                                                                  price: 10, unit: "100 grams")])]))
-        })
+        }, addMenuItem: { _ in})
         
         let categoriesDisposable = mainMenuViewModel.categories
             .drive(onNext: { categories in
@@ -41,6 +41,17 @@ final class MainMenuViewModelTest: XCTestCase {
         }
         
         mainMenuViewModel.viewLoad()
+    }
+    
+    func testAddItem() {
+        var actualItems: [MenuItem] = []
+        let viewModel = MainMenuViewModel(showMainMenu: { .empty() },
+                                          addMenuItem: { item in actualItems.append(item) })
+        
+        viewModel.addItem(item: MenuItem(id: 1, name: "name",
+                                         description: "", price: 1, unit: ""))
+        
+        XCTAssertEqual(actualItems.first!.id, 1)
     }
 
 }

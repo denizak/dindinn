@@ -9,7 +9,13 @@ import Foundation
 import RxRelay
 import RxSwift
 
-struct ManageCartItem {
+protocol ManageCartItem {
+    var items: [MenuItem] { get }
+    var numberOfItems: Observable<Int> { get }
+    func add(item: MenuItem)
+}
+
+struct ManageCartItemImpl : ManageCartItem {
     private let store: CartItemStore
     
     var items: [MenuItem] { store.items }
