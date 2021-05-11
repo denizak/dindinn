@@ -25,6 +25,8 @@
 		6044E86E264A6B820043A54C /* ManageCartItemTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6044E86D264A6B820043A54C /* ManageCartItemTest.swift */; };
 		6044E870264A71BD0043A54C /* CartItemButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6044E86F264A71BD0043A54C /* CartItemButtonViewModel.swift */; };
 		6044E872264A724C0043A54C /* CartItemButtonViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6044E871264A724C0043A54C /* CartItemButtonViewModelTest.swift */; };
+		6044E874264A7AD90043A54C /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6044E873264A7AD90043A54C /* CartViewModel.swift */; };
+		6044E876264A7AF10043A54C /* CartViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6044E875264A7AF10043A54C /* CartViewModelTest.swift */; };
 		606C3F6A2649644200545DD6 /* MenuServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606C3F692649644200545DD6 /* MenuServiceTest.swift */; };
 		606C3F6C2649676300545DD6 /* MenuService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606C3F6B2649676300545DD6 /* MenuService.swift */; };
 		606C3F6F264969B000545DD6 /* ShowMainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606C3F6E264969B000545DD6 /* ShowMainMenu.swift */; };
@@ -72,6 +74,8 @@
 		6044E86D264A6B820043A54C /* ManageCartItemTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageCartItemTest.swift; sourceTree = "<group>"; };
 		6044E86F264A71BD0043A54C /* CartItemButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemButtonViewModel.swift; sourceTree = "<group>"; };
 		6044E871264A724C0043A54C /* CartItemButtonViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemButtonViewModelTest.swift; sourceTree = "<group>"; };
+		6044E873264A7AD90043A54C /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
+		6044E875264A7AF10043A54C /* CartViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModelTest.swift; sourceTree = "<group>"; };
 		606C3F692649644200545DD6 /* MenuServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuServiceTest.swift; sourceTree = "<group>"; };
 		606C3F6B2649676300545DD6 /* MenuService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuService.swift; sourceTree = "<group>"; };
 		606C3F6E264969B000545DD6 /* ShowMainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMainMenu.swift; sourceTree = "<group>"; };
@@ -220,6 +224,7 @@
 			children = (
 				606C3F7526497CC300545DD6 /* MainMenuViewModel.swift */,
 				6044E86F264A71BD0043A54C /* CartItemButtonViewModel.swift */,
+				6044E873264A7AD90043A54C /* CartViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 			children = (
 				606C3F7826497CE000545DD6 /* MainMenuViewModelTest.swift */,
 				6044E871264A724C0043A54C /* CartItemButtonViewModelTest.swift */,
+				6044E875264A7AF10043A54C /* CartViewModelTest.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -385,6 +391,7 @@
 				606C3F6C2649676300545DD6 /* MenuService.swift in Sources */,
 				606C3F7626497CC300545DD6 /* MainMenuViewModel.swift in Sources */,
 				60108E98264835680014CE69 /* HeadlineService.swift in Sources */,
+				6044E874264A7AD90043A54C /* CartViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6044E876264A7AF10043A54C /* CartViewModelTest.swift in Sources */,
 				606C3F7926497CE000545DD6 /* MainMenuViewModelTest.swift in Sources */,
 				6044E872264A724C0043A54C /* CartItemButtonViewModelTest.swift in Sources */,
 				606C3F6A2649644200545DD6 /* MenuServiceTest.swift in Sources */,
