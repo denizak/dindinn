@@ -12,7 +12,7 @@ import XCTest
 final class CartItemStoreTest: XCTestCase {
 
     func testAdd() {
-        let store = CartItemStore.shared
+        let store = CartItemStoreImpl.shared
         
         store.add(item: MenuItem(id: 1,
                                  name: "name1",
@@ -27,7 +27,7 @@ final class CartItemStoreTest: XCTestCase {
     }
     
     func testRemove() {
-        let store = CartItemStore.shared
+        let store = CartItemStoreImpl.shared
         
         store.add(item: MenuItem(id: 1,
                                  name: "name1",

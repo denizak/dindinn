@@ -7,9 +7,19 @@
 
 import Foundation
 
-final class CartItemStore {
+protocol CartItemStore {
+    func add(item: MenuItem)
+    func remove(id: Int)
+    var items: [MenuItem] { get }
+}
+
+func sharedCartItemStore() -> CartItemStore {
+    CartItemStoreImpl.shared
+}
+
+final class CartItemStoreImpl: CartItemStore {
     
-    static let shared = CartItemStore()
+    static let shared = CartItemStoreImpl()
     
     private(set) var items: [MenuItem] = []
     
