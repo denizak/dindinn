@@ -35,6 +35,9 @@
 		606C3F7926497CE000545DD6 /* MainMenuViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606C3F7826497CE000545DD6 /* MainMenuViewModelTest.swift */; };
 		606C3F7B2649862100545DD6 /* CartItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606C3F7A2649862100545DD6 /* CartItemStore.swift */; };
 		606C3F7D264986C300545DD6 /* CartItemStoreTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606C3F7C264986C300545DD6 /* CartItemStoreTest.swift */; };
+		607094EA264AC3FD0050796B /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607094E9264AC3FD0050796B /* Main.swift */; };
+		607094ED264ACAE90050796B /* HeadlineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607094EC264ACAE90050796B /* HeadlineTableViewCell.swift */; };
+		607094EF264ACB230050796B /* HeadlineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607094EE264ACB230050796B /* HeadlineTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +87,9 @@
 		606C3F7826497CE000545DD6 /* MainMenuViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewModelTest.swift; sourceTree = "<group>"; };
 		606C3F7A2649862100545DD6 /* CartItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemStore.swift; sourceTree = "<group>"; };
 		606C3F7C264986C300545DD6 /* CartItemStoreTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItemStoreTest.swift; sourceTree = "<group>"; };
+		607094E9264AC3FD0050796B /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		607094EC264ACAE90050796B /* HeadlineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlineTableViewCell.swift; sourceTree = "<group>"; };
+		607094EE264ACB230050796B /* HeadlineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeadlineTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,16 +146,17 @@
 		60108E4C26481F200014CE69 /* dindinn */ = {
 			isa = PBXGroup;
 			children = (
+				607094EB264ACAC90050796B /* Views */,
 				606C3F7426497B5300545DD6 /* ViewModel */,
 				606C3F6D2649699200545DD6 /* Interactor */,
 				60108E882648324C0014CE69 /* Adapter */,
 				60108E4D26481F200014CE69 /* AppDelegate.swift */,
 				60108E4F26481F200014CE69 /* SceneDelegate.swift */,
-				60108E5126481F200014CE69 /* ViewController.swift */,
 				60108E5326481F210014CE69 /* Main.storyboard */,
 				60108E5626481F240014CE69 /* Assets.xcassets */,
 				60108E5826481F240014CE69 /* LaunchScreen.storyboard */,
 				60108E5B26481F240014CE69 /* Info.plist */,
+				607094E9264AC3FD0050796B /* Main.swift */,
 			);
 			path = dindinn;
 			sourceTree = "<group>";
@@ -237,6 +244,16 @@
 				6044E875264A7AF10043A54C /* CartViewModelTest.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		607094EB264ACAC90050796B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				60108E5126481F200014CE69 /* ViewController.swift */,
+				607094EC264ACAE90050796B /* HeadlineTableViewCell.swift */,
+				607094EE264ACB230050796B /* HeadlineTableViewCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +374,7 @@
 				60108E5A26481F240014CE69 /* LaunchScreen.storyboard in Resources */,
 				60108E5726481F240014CE69 /* Assets.xcassets in Resources */,
 				60108E5526481F210014CE69 /* Main.storyboard in Resources */,
+				607094EF264ACB230050796B /* HeadlineTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,10 +401,12 @@
 			files = (
 				60108E5226481F200014CE69 /* ViewController.swift in Sources */,
 				6044E870264A71BD0043A54C /* CartItemButtonViewModel.swift in Sources */,
+				607094ED264ACAE90050796B /* HeadlineTableViewCell.swift in Sources */,
 				60108E4E26481F200014CE69 /* AppDelegate.swift in Sources */,
 				606C3F6F264969B000545DD6 /* ShowMainMenu.swift in Sources */,
 				60108E5026481F200014CE69 /* SceneDelegate.swift in Sources */,
 				606C3F7B2649862100545DD6 /* CartItemStore.swift in Sources */,
+				607094EA264AC3FD0050796B /* Main.swift in Sources */,
 				6044E86C264A6B6F0043A54C /* ManageCartItem.swift in Sources */,
 				606C3F6C2649676300545DD6 /* MenuService.swift in Sources */,
 				606C3F7626497CC300545DD6 /* MainMenuViewModel.swift in Sources */,
